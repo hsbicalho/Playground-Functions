@@ -89,14 +89,18 @@ function decode(string) {
 // Desafio 10
 
 function techList(arrayTech, name) {
-  arrayTech.sort();
-  for (const x in arrayTech) {
-    objeto[x] = {
-      tech: arrayTech[x],
-      name: name,
-    };
-    console.log(objeto);
-  }
+  if (arrayTech.length != 0) {
+    arrayTech.sort();
+    let array = [];
+    let objeto = {};
+    for (const x in arrayTech) {
+      array.push({
+        tech: arrayTech[x],
+        name: name,
+      });
+    }
+    return array;
+  } else return 'Vazio!';
 }
 techList(['React', 'Jest', 'HTML', 'CSS', 'JavaScript'], 'heitor');
 module.exports = {
