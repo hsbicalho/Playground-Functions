@@ -41,10 +41,17 @@ function triangleCheck(lineA, lineB, lineC) {
 }
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(string) {
+  let qtCoposDagua = 0;
+  for (let i = 0; i < string.length; i += 1) {
+    if (!isNaN(string[i])) {
+      // isNaN retorna falso se o input for numero e true se não for
+      qtCoposDagua += Number(string[i]);
+    }
+  }
+  if (qtCoposDagua === 1) return '1 copo de água';
+  if (qtCoposDagua !== 1) return `${qtCoposDagua} copos de água`;
 }
-
 module.exports = {
   generatePhoneNumber,
   hydrate,
