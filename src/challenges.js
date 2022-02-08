@@ -32,8 +32,8 @@ function footballPoints(wins, ties) {
 
 // Desafio 6
 function highestCount(arrayNumers) {
-  let maior = Math.max(...arrayNumers);
-  let cont = 0;
+  let maior = Math.max(...arrayNumers); // Math.max recebe varios argumentos e calcula o maior valor dentre eles
+  let cont = 0; // (...arrayNumbers) Operador spread para espalhar o array dentro da função Math.max
   for (let i = 0; i < arrayNumers.length; i++) {
     if (maior === arrayNumers[i]) {
       cont++;
@@ -43,8 +43,15 @@ function highestCount(arrayNumers) {
 }
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  if (Math.abs(cat1 - mouse) < Math.abs(cat2 - mouse)) {
+    // Math.abs extrai o valor absoluto de um numero (módulo)
+    return 'cat1';
+  }
+  if (Math.abs(cat1 - mouse) > Math.abs(cat2 - mouse)) {
+    return 'cat2';
+  }
+  return 'os gatos trombam e o rato foge';
 }
 
 // Desafio 8
