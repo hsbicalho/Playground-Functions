@@ -14,13 +14,20 @@ function splitSentence(sentence) {
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(arrayString) {
+  let string;
+  for (let i = 0; i <= arrayString.length; i++) {
+    if (arrayString[i] == null) {
+      string = `${arrayString[i - 1]}, ${arrayString[0]}`;
+    }
+  }
+  return string;
 }
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  let totalPoints = wins * 3 + ties;
+  return totalPoints;
 }
 
 // Desafio 6
